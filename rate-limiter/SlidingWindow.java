@@ -1,8 +1,11 @@
 import java.util.Queue;
 
 public class SlidingWindow implements RateLimiter {
+    // Using a queue for a request which will having time
     Queue<Integer> slidingWindow;
+    // Bucket Capicity or may be we can say the buffer-size
     int bucketCap;
+    // will put the time into the queue
     int time;
 
     public SlidingWindow(int time, int cap) {
